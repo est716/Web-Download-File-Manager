@@ -1,0 +1,17 @@
+{
+    "name": "Auto Download Path Selector",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "AddPath.html"
+    },
+    "permissions": ["downloads", "scripting", "tabs", "activeTab", "storage"],
+    "background": {
+        "service_worker": "scripts/download.js"
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
