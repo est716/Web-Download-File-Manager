@@ -146,6 +146,7 @@ chrome.downloads.onChanged.addListener(async (delta) => {
         const { downloadUrl: url, storageFilePath: folderPath } = data.reload;
         console.log(`重新下載: ${url}`);
         console.log("reload filename : ", filename.filename);
+        console.log("storageFilePath : ", folderPath);
         await startDownload(url, `${folderPath}/${filename.filename}`);
     }
 });
